@@ -1,0 +1,76 @@
+.cardGrid{
+    grid-area: cardGrid;
+    grid-column: span 4;
+    background-color:$colorone;
+    
+    .contenedorPreguntas{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+        position: relative;
+        background-color: $colorone;
+
+        h3 {
+            padding: 10px;
+        }
+
+        img{
+            max-width: 800px;
+            @media (max-width: 600px){
+                width: 20rem;
+            }
+        }
+
+        .mytable{
+            width: 100%;
+            overflow-x: auto;
+            font-size: 24px;
+
+            .tabla-2{
+                margin: auto;
+                background-color: $colortabla2;
+                width: 800px;
+                height: 400px;
+                align-content: center;
+                justify-content: center;
+                font-family: 'Avenir';
+                font-size: 16px;
+
+                .tabla{
+                    background-color: $colortabla;
+                    list-style: none;
+                    padding: 0;
+                    width: 10%;
+                    max-width: 10px;
+                    margin: 0;
+                    text-align: center;
+                }
+
+                .tabla-1{
+                    background-color: $colortabla1;
+                    list-style: none;
+                    padding: 0;
+                    width: 10%;
+                    max-width: 10px;
+                    margin: auto;
+                    text-align: center;
+                }
+
+            }
+
+        }
+
+        p{
+            font-family: 'Avenir';
+            font-size: 18px;
+            text-align: justify;
+            padding: 0% 3% 1rem 3%;
+            line-height: 1.5;
+        }
+
+    }
+}

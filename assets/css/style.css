@@ -1,0 +1,533 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn, .cardGrid .cardDestinos .card__btndestinos, .cardGrid .cardIndex .cardinf__btnindex {
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  text-decoration: none;
+  font-family: "Avenir";
+  display: flex;
+  justify-content: center;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url(../fonts/Avenir\ LT\ Std\ 45\ Book.otf);
+}
+@font-face {
+  font-family: Avenir-Black;
+  src: url(../fonts/Avenir\ LT\ Std\ 95\ Black.otf);
+}
+body {
+  background-color: #A4C3B2;
+}
+
+.contenedorGrid {
+  width: 100%;
+  max-width: 2000px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "navGrid    navGrid    navGrid    navGrid" "tituloGrid tituloGrid tituloGrid tituloGrid" "cardGrid cardGrid cardGrid cardGrid" "footerGrid  footerGrid footerGrid footerGrid";
+}
+
+.navGrid {
+  grid-area: navGrid;
+  grid-column: span 4;
+}
+
+.tituloGrid {
+  grid-area: tituloGrid;
+  grid-column: span 4;
+  background-color: #CCE3DE;
+}
+
+.cardGrid {
+  grid-area: cardGrid;
+  grid-column: span 4;
+  background-color: #CCE3DE;
+}
+
+.footerGrid {
+  grid-area: footerGrid;
+  grid-column: span 4;
+  padding: 40px 0px;
+  background-color: #A4C3B2;
+  text-align: center;
+}
+
+.navGrid {
+  grid-area: navGrid;
+  grid-column: span 4;
+}
+.navGrid .banner {
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.navGrid nav {
+  background-color: rgba(234, 244, 244, 0.8431372549);
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  justify-items: center;
+  justify-content: center;
+}
+.navGrid nav .fa-bars {
+  color: #000000;
+  font-size: 24px;
+  padding: 15px;
+  visibility: hidden;
+}
+@media (max-width: 600px) {
+  .navGrid nav .fa-bars {
+    visibility: visible;
+  }
+  .navGrid nav .fa-bars:hover + ul {
+    left: 0;
+  }
+}
+.navGrid nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+@media (max-width: 600px) {
+  .navGrid nav ul {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #ffffff;
+    flex-direction: column;
+    width: 250px;
+    height: 100vh;
+    transition: 0.2s;
+    z-index: 100;
+  }
+  .navGrid nav ul:hover {
+    left: 0;
+  }
+}
+.navGrid nav ul li {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: box-shadow, transform;
+}
+.navGrid nav ul li:hover, .navGrid nav ul li:focus, .navGrid nav ul li:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+.navGrid nav ul li a {
+  text-decoration: none;
+  display: block;
+  color: #000000;
+  font-family: "Avenir-Black";
+  padding: 30px;
+}
+.navGrid nav ul li a:hover {
+  background-color: rgba(234, 243, 241, 0.8);
+}
+
+.contenedor {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  /* --- --- CAROUSEL --- --- */
+}
+.contenedor .carousel__contenedor {
+  position: relative;
+}
+.contenedor .carousel__anterior,
+.contenedor .carousel__siguiente {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  top: calc(50% - 35px);
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  background: none;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+.contenedor .carousel__anterior:hover,
+.contenedor .carousel__siguiente:hover {
+  opacity: 100%;
+}
+.contenedor .carousel__anterior {
+  left: -10px;
+}
+.contenedor .carousel__siguiente {
+  right: -10px;
+}
+.contenedor .carousel__lista {
+  overflow: hidden;
+}
+.contenedor .carousel__elemento {
+  text-align: center;
+}
+.contenedor .carousel__indicadores .glider-dot {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  opacity: 0.2;
+  border-radius: 0;
+}
+.contenedor .carousel__indicadores .glider-dot:hover {
+  opacity: 0.5;
+}
+.contenedor .carousel__indicadores .glider-dot.active {
+  opacity: 1;
+}
+
+.cardGrid {
+  grid-area: cardGrid;
+  grid-column: span 4;
+  background-color: #CCE3DE;
+}
+.cardGrid .cardIndex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cardGrid .cardIndex .cardinf {
+  width: 300px;
+  border: solid 2px;
+  border-radius: 6px;
+  margin: 10px;
+  justify-content: center;
+  padding: 0 0 20px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.cardGrid .cardIndex .cardinf p {
+  font-family: "Avenir";
+  font-size: 16px;
+  text-align: center;
+  padding: 0% 3% 1rem 3%;
+  line-height: 1.5;
+}
+.cardGrid .cardIndex .cardinf:hover {
+  box-shadow: #000000;
+  transform: translateY(-1%);
+}
+.cardGrid .cardIndex .cardinf__titulo, .cardGrid .cardIndex .cardinf__ds {
+  text-align: center;
+}
+.cardGrid .cardIndex .cardinf__img {
+  width: 100%;
+  height: 210px;
+}
+.cardGrid .cardIndex .cardinf__btnindex {
+  background-color: #808080;
+  color: #ffffff;
+}
+
+.cardGrid {
+  grid-area: cardGrid;
+  grid-column: span 4;
+  background-color: #CCE3DE;
+}
+.cardGrid .cardDestinos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cardGrid .cardDestinos .card {
+  width: 300px;
+  border: solid 2px;
+  border-radius: 6px;
+  margin: 10px;
+  justify-content: center;
+  padding: 0 0 20px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.cardGrid .cardDestinos .card p {
+  font-family: "Avenir";
+  font-size: 16px;
+  text-align: center;
+  padding: 0% 3% 1rem 3%;
+  line-height: 1.5;
+}
+.cardGrid .cardDestinos .card:hover {
+  box-shadow: #000000;
+  transform: translateY(-3%);
+}
+.cardGrid .cardDestinos .card__titulo, .cardGrid .cardDestinos .card__ds {
+  text-align: center;
+}
+.cardGrid .cardDestinos .card__img {
+  width: 100%;
+  height: 210px;
+}
+.cardGrid .cardDestinos .card__btndestinos {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.cardGrid {
+  grid-area: cardGrid;
+  grid-column: span 4;
+  background-color: #CCE3DE;
+}
+.cardGrid .contenedorPreguntas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #CCE3DE;
+}
+.cardGrid .contenedorPreguntas h3 {
+  padding: 10px;
+}
+.cardGrid .contenedorPreguntas img {
+  max-width: 800px;
+}
+@media (max-width: 600px) {
+  .cardGrid .contenedorPreguntas img {
+    width: 20rem;
+  }
+}
+.cardGrid .contenedorPreguntas .mytable {
+  width: 100%;
+  overflow-x: auto;
+  font-size: 24px;
+}
+.cardGrid .contenedorPreguntas .mytable .tabla-2 {
+  margin: auto;
+  background-color: #808080;
+  width: 800px;
+  height: 400px;
+  align-content: center;
+  justify-content: center;
+  font-family: "Avenir";
+  font-size: 16px;
+}
+.cardGrid .contenedorPreguntas .mytable .tabla-2 .tabla {
+  background-color: rgba(78, 155, 155, 0.8431372549);
+  list-style: none;
+  padding: 0;
+  width: 10%;
+  max-width: 10px;
+  margin: 0;
+  text-align: center;
+}
+.cardGrid .contenedorPreguntas .mytable .tabla-2 .tabla-1 {
+  background-color: #ffffff;
+  list-style: none;
+  padding: 0;
+  width: 10%;
+  max-width: 10px;
+  margin: auto;
+  text-align: center;
+}
+.cardGrid .contenedorPreguntas p {
+  font-family: "Avenir";
+  font-size: 18px;
+  text-align: justify;
+  padding: 0% 3% 1rem 3%;
+  line-height: 1.5;
+}
+
+.cardGrid {
+  grid-area: cardGrid;
+  grid-column: span 4;
+  background-color: #CCE3DE;
+}
+.cardGrid .contenedorInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #CCE3DE;
+}
+.cardGrid .contenedorInfo p {
+  font-family: "Avenir";
+  font-size: 18px;
+  text-align: center;
+  padding: 0% 3% 1rem 3%;
+  line-height: 1.5;
+}
+
+.cardGrid {
+  grid-area: cardGrid;
+  grid-column: span 4;
+  background-color: #CCE3DE;
+}
+.cardGrid .contenedorContact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #CCE3DE;
+}
+.cardGrid .contenedorContact .tarjetaPadre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 1rem 0;
+}
+.cardGrid .contenedorContact .tarjetaPadre .tarjeta {
+  width: 200px;
+  height: auto;
+  border: solid 2px;
+  border-radius: 6px;
+  margin: 10px;
+  justify-content: center;
+  padding: 0 0 20px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.cardGrid .contenedorContact .tarjetaPadre .tarjeta:hover, .cardGrid .contenedorContact .tarjetaPadre .tarjeta:focus, .cardGrid .contenedorContact .tarjetaPadre .tarjeta:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+.cardGrid .contenedorContact .tarjetaPadre .tarjeta__titulo, .cardGrid .contenedorContact .tarjetaPadre .tarjeta__ds {
+  text-align: center;
+  padding-top: 2px;
+}
+.cardGrid .contenedorContact .tarjetaPadre .tarjeta__img {
+  width: auto;
+  padding-left: 22px;
+}
+.cardGrid .contenedorContact p {
+  font-family: "Avenir";
+  font-size: 18px;
+  text-align: justify;
+  padding: 0% 3% 1rem 3%;
+  line-height: 1.5;
+}
+
+.footerGrid {
+  grid-area: footerGrid;
+  grid-column: span 4;
+  padding: 40px 0px;
+  background-color: #A4C3B2;
+  text-align: center;
+}
+.footerGrid .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.footerGrid .container .redes {
+  font-size: 20px;
+  font-family: "Avenir-Black";
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footerGrid .container .redes img:hover {
+  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  perspective: 1000px;
+}
+@-webkit-keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+.footerGrid .container .dr {
+  font-size: 14px;
+  font-family: "Avenir-Black";
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  padding: 1.5%;
+  font-family: "Avenir-Black";
+  font-size: 40px;
+  text-align: center;
+}
+
+h2 {
+  padding: 0% 3% 1rem 3%;
+  font-family: "Avenir-Black";
+  font-size: 28px;
+  text-align: center;
+}
+
+h3 {
+  padding: 0% 3% 1rem 3%;
+  font-family: "Avenir-Black";
+  font-size: 24px;
+  text-align: center;
+}
+
+h4 {
+  padding: 0% 3% 1rem 3%;
+  font-family: "Avenir-Black";
+  font-size: 18px;
+  text-align: center;
+}
+
+p {
+  font-family: "Avenir";
+  font-size: 18px;
+  text-align: justify;
+  padding: 0% 3% 1rem 3%;
+  line-height: 1.5;
+}

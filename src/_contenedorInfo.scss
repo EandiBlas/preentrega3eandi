@@ -1,0 +1,28 @@
+.cardGrid{
+
+    grid-area: cardGrid;
+    grid-column: span 4;
+    background-color: $colorone;
+    
+    .contenedorInfo{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+        position: relative;
+        background-color: $colorone;
+
+        p{
+            font-family: 'Avenir';
+            font-size: 18px;
+            text-align: center;
+            padding: 0% 3% 1rem 3%;
+            line-height: 1.5;
+        }
+    }
+
+}

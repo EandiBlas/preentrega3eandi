@@ -1,0 +1,54 @@
+@import "reset";
+@import "extend";
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "body";
+@import "grilla";
+@import "header";
+@import "carousel";
+@import "cardIndex";
+@import "cardDestinos";
+@import "contenedorpreguntas";
+@import "contenedorInfo";
+@import "contenedorcontacto";
+@import "footer";
+
+
+
+
+h1 {
+    padding: 1.5%;
+    font-family: 'Avenir-Black';
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    padding: 0% 3% 1rem 3%;
+    font-family: 'Avenir-Black';
+    font-size: 28px;
+    text-align: center;
+}
+
+h3{
+    padding: 0% 3% 1rem 3%;
+    font-family: 'Avenir-Black';
+    font-size: 24px;
+    text-align: center;
+}
+
+h4{
+    padding: 0% 3% 1rem 3%;
+    font-family: 'Avenir-Black';
+    font-size: 18px;
+    text-align: center;
+}
+
+p{
+    font-family: 'Avenir';
+    font-size: 18px;
+    text-align: justify;
+    padding: 0% 3% 1rem 3%;
+    line-height: 1.5;
+}

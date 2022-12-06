@@ -1,0 +1,68 @@
+.cardGrid{
+    grid-area: cardGrid;
+    grid-column: span 4;
+    background-color: $colorone;
+
+    .contenedorContact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+        position: relative;
+        background-color: $colorone;
+        
+        .tarjetaPadre{
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0 0 1rem 0;
+
+            .tarjeta{
+                width: 200px;
+                height: auto;
+                border: solid 2px;
+                border-radius: 6px;
+                margin: 10px;
+                justify-content: center;
+                padding: 0 0 20px 0;
+                background-color: #ffffff;
+                overflow: hidden;
+        
+                &:hover, &:focus, &:active {
+                    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+                    -webkit-transform: scale(1.1);
+                    transform: scale(1.05);
+                }
+        
+                &__titulo , &__ds{
+                    text-align: center;
+                    padding-top: 2px;
+                }
+        
+                &__img{
+                    width: auto;
+                    padding-left: 22px;
+                }
+        
+            }
+        }
+
+        p{
+            font-family: 'Avenir';
+            font-size: 18px;
+            text-align: justify;
+            padding: 0% 3% 1rem 3%;
+            line-height: 1.5;
+        }
+
+
+
+    }
+    
+}
+

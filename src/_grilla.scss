@@ -1,0 +1,32 @@
+.contenedorGrid{
+    width: 100%;
+    max-width: 2000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:    "navGrid    navGrid    navGrid    navGrid"
+                            "tituloGrid tituloGrid tituloGrid tituloGrid"
+                            "cardGrid cardGrid cardGrid cardGrid"
+                            "footerGrid  footerGrid footerGrid footerGrid";
+}
+.navGrid{
+    grid-area: navGrid;
+    grid-column: span 4;
+}
+.tituloGrid{
+    grid-area: tituloGrid;
+    grid-column: span 4;
+    background-color:$colorone;
+}
+.cardGrid{
+    grid-area: cardGrid;
+    grid-column: span 4;
+    background-color:$colorone;
+}
+.footerGrid{
+    grid-area: footerGrid;
+    grid-column: span 4;
+    padding: 40px 0px;
+    background-color: $colortwo;
+    text-align: center;
+}

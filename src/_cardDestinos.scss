@@ -1,0 +1,52 @@
+.cardGrid{
+    grid-area: cardGrid;
+    grid-column: span 4;
+    background-color: $colorone;
+
+        .cardDestinos{
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            .card{
+                width: 300px;
+                border: solid 2px;
+                border-radius: 6px;
+                margin: 10px;
+                justify-content: center;
+                padding: 0 0 20px 0;
+                background-color: #ffffff;
+                overflow: hidden;
+
+                p{
+                    font-family: 'Avenir';
+                    font-size: 16px;
+                    text-align: center;
+                    padding: 0% 3% 1rem 3%;
+                    line-height: 1.5;
+                }
+
+                &:hover{
+                    box-shadow: #000000;
+                    transform: translateY(-3%);
+                }
+    
+                &__titulo , &__ds{
+                    text-align: center;
+                }
+    
+                &__img{
+                    width: 100%;
+                    height: 210px;
+                }
+    
+                &__btndestinos{
+                    @extend .btn;
+                    background-color:#000000;
+                    color:#ffffff;
+                }
+            }
+        }
+        
+}
